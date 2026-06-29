@@ -382,7 +382,7 @@ summary(baseline_wide$rhs15_distress_thermometer_how_h)
 summary(baseline_wide$eq5d3l_provide_a_score_from_0_100)
 
 #Creating Summary Table for Baseline Assessments ------------------------------------------------------
-baseline_assessment_summary <- baseline_wide %>% summarize(
+baseline_assessment_summary <- baseline_wide %>% summarize( #summarize() can be replaced with reframe()
 `PSYCHLOPS Total (0-20)` = c(mean(pre_psych_total, na.rm = TRUE), median(pre_psych_total, na.rm = TRUE), 
       min(pre_psych_total, na.rm = TRUE), max(pre_psych_total, na.rm = TRUE), 
       sd(pre_psych_total, na.rm = TRUE)),  
@@ -390,7 +390,7 @@ baseline_assessment_summary <- baseline_wide %>% summarize(
       min(hopkins_total_avg, na.rm = TRUE), max(hopkins_total_avg, na.rm = TRUE), 
       sd(hopkins_total_avg, na.rm = TRUE)),
 #`HSCL-25 Total (25-100)` = c(mean(hopkins_total_sum, na.rm = TRUE), median(hopkins_total_sum, na.rm = TRUE), 
-#      min(hopkins_total_sum, na.rm = TRUE), max(hopkins_total_sum, na.rm = TRUE), 
+#      min(hopkins_total_sum, na.rm = TRUE), max(hopkins_total_sum, na.rm = TRUE),0 
 #      sd(hopkins_total_sum, na.rm = TRUE)),
 #`HSCL-25 Anxiety (0-40)` = c(mean(hopkins_anxiety_total, na.rm = TRUE), median(hopkins_anxiety_total, na.rm = TRUE), 
 #      min(hopkins_anxiety_total, na.rm = TRUE), max(hopkins_anxiety_total, na.rm = TRUE), 
