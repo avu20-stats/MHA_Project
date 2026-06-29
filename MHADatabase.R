@@ -3,7 +3,6 @@
 #install.packages("devtools")
 #devtools::install_github("nx10/httpgd")
 
-#install.packages("here")
 #install.packages("tidyverse")
 #install.packages("openxlsx")
 #install.packages("gt")
@@ -14,7 +13,6 @@
 #install.packages("ggeffects")
 #install.packages("patchwork")
 
-library(here)
 library(tidyverse) #For data manipulation and visualization
 library(openxlsx) #For reading Excel files
 library(gt) #For creating summary statistic tables
@@ -27,7 +25,7 @@ library(patchwork) #For combining ggplots
 
 #File path
 here()
-mha <- read.xlsx(here("Data", "MHADatabase_DATA_2026-01-20OD.xlsx"), detectDates = TRUE)
+mha <- read.xlsx("Data", "MHADatabase_DATA_2026-01-20OD.xlsx", detectDates = TRUE)
 mha <- rename(mha, instrument_name=redcap_repeat_instrument, repeat_instance=redcap_repeat_instance)
 
 #Cleaning MHA Database---------------------------------------------------------------------------------
